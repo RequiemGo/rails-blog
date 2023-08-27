@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: melius
+  password: melius
+  pool: 5
+
+development:
+  <<: *default
+  database: blog
+  app_name: blog
+  # api_password: idf_somos_2021
+
+test:
+  <<: *default
+  database: blog_test
