@@ -4,5 +4,5 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
-import "trix"cambi
+import "trix"
 import "@rails/actiontext"
