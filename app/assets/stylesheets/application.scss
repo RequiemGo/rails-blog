@@ -1,2 +1,10 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import "font-awesome";
+@import "./actiontext.scss";
+@import "./trix.css.scss";
+@import "trix/dist/trix.css";
+/*
+*= require trix
+*/

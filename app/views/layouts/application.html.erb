@@ -2,17 +2,51 @@
 <html>
   <head>
     <title>Blog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>    
+    <!-- Agregamos los estilos personalizados -->
+    <style>
+      body {
+        background-color: #ffffff; /* Fondo blanco */
+        color: #333333; /* Color de fuente oscuro */
+        font-family: 'Arial', sans-serif; /* Fuente clara y elegante */
+      }
+
+      header {
+        background-color: #ff0000; /* Fondo rojo llamativo para el header */
+        padding: 10px;
+        color: #ffffff; /* Texto en el header en color blanco */
+      }
+
+      footer {
+        background-color: #ff0000; /* Fondo rojo llamativo para el footer */
+        padding: 10px;
+        color: #ffffff; /* Texto en el footer en color blanco */
+        text-align: center;
+      }
+    </style>
+    
+    <!-- Enlaces de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <header>
+      <!-- Aquí coloca el buscador, botones de sign in y cambio de idioma -->
+    </header>
+
     <%= render "shared/navbar" %>
     <%= yield %>
+
+    <footer>
+      Copyright 2023 by Andres Castillo. 
+      <a href="https://twitter.com/Me_Requiem" target="_blank">Twitter</a>
+    </footer>
   </body>
 </html>
