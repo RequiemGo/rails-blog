@@ -78,3 +78,5 @@ gem "annotate", "~> 3.2"
 gem "image_processing", "~> 1.12"
 
 gem "trix-rails", "~> 2.4"
+
+gem "devise", "~> 4.9"

@@ -39,14 +39,25 @@
   <body>
     <header>
       <!-- Aquí coloca el buscador, botones de sign in y cambio de idioma -->
+      <%= render "shared/navbar" %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p> 
     </header>
+    <main>
+      <% if user_signed_in? %>
+        <%= link_to "Perfil", edit_user_registration_path %>
+        <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Iniciar sesión", new_user_session_path %>
+        <%= link_to "Registrarse", new_user_registration_path %>
+      <% end %> 
+      <%= yield %>
+    
+    </main>
 
-    <%= render "shared/navbar" %>
-    <%= yield %>
-
-    <footer>
-      Copyright 2023 by Andres Castillo. 
-      <a href="https://twitter.com/Me_Requiem" target="_blank">Twitter</a>
-    </footer>
   </body>
+  <footer>
+    Copyright 2023 by Andres Castillo. 
+    <a href="https://twitter.com/Me_Requiem" target="_blank">Twitter</a>
+  </footer>
 </html>
