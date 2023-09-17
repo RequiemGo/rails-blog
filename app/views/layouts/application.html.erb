@@ -11,22 +11,17 @@
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>    
     <!-- Agregamos los estilos personalizados -->
     <style>
-      body {
-        background-color: #ffffff; /* Fondo blanco */
-        color: #333333; /* Color de fuente oscuro */
-        font-family: 'Arial', sans-serif; /* Fuente clara y elegante */
-      }
 
       header {
-        background-color: #ff0000; /* Fondo rojo llamativo para el header */
+        background-color: #2A4D61; 
         padding: 10px;
-        color: #ffffff; /* Texto en el header en color blanco */
+        color: #ffffff; 
       }
 
       footer {
-        background-color: #ff0000; /* Fondo rojo llamativo para el footer */
+        background-color: #2A4D61; 
         padding: 10px;
-        color: #ffffff; /* Texto en el footer en color blanco */
+        color: #ffffff; 
         text-align: center;
       }
     </style>
@@ -38,26 +33,28 @@
 
   <body>
     <header>
-      <!-- Aquí coloca el buscador, botones de sign in y cambio de idioma -->
+      
       <%= render "shared/navbar" %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> 
+      <% if notice || alert %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p> 
+      <% end %>
     </header>
     <main>
-      <% if user_signed_in? %>
-        <%= link_to "Perfil", edit_user_registration_path %>
-        <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to "Iniciar sesión", new_user_session_path %>
-        <%= link_to "Registrarse", new_user_registration_path %>
-      <% end %> 
+
       <%= yield %>
     
     </main>
-
+    <style>
+      body {
+        background-color: #66737A;
+        color: #ffffff; 
+        font-family: 'Arial ', sans-serif; 
+      }
+    </style>
+    <footer>
+      <span>Copyright <%= Date.current.year %> by Andres Castillo.</span> 
+      <a href="https://twitter.com/Me_Requiem" target="_blank">Twitter</a>
+    </footer>
   </body>
-  <footer>
-    Copyright 2023 by Andres Castillo. 
-    <a href="https://twitter.com/Me_Requiem" target="_blank">Twitter</a>
-  </footer>
 </html>
