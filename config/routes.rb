@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+  get 'change_language/:language', to: 'application#change_language', as: :change_language
+
 end

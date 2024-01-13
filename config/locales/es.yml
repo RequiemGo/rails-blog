@@ -1,0 +1,90 @@
+es:
+  boolean:
+    true: 'Sí' 
+    false: 'No'
+  common: 
+    confirm: Confirmar
+    cancel: Cancelar
+    save: Guardar
+    edit: Editar
+    delete: Borrar
+    new: Nuevo
+    back: Volver
+    show: Mostrar
+    search: Buscar
+    filter: Filtrar
+    actions: Acciones
+    no_results: No hay resultados
+    no_records: No hay registros
+    no_records_found: No se encontraron registros
+    no_records_found_for: No se encontraron registros para
+    no_records_found_for_the_search: No se encontraron registros para la búsqueda
+    sign_in: Iniciar sesión
+    sign_out: Cerrar sesión
+    sign_up: Registrarse
+    email: Correo electrónico
+    search: Buscar
+
+  activerecord:
+    errors:
+      models:
+      post:
+        attributes:
+          title_es:
+            record_invalid: "La entrada no es válida"
+            not_found: "No encontrado"
+            taken: "ya ha sido tomado"
+            blank: "no puede estar en blanco"
+            invalid: "no es válido"
+            too_short: "es demasiado corto (mínimo %{count} caracteres)"
+            too_long: "es demasiado largo (máximo %{count} caracteres)"
+            duplicate: "ya está en uso"
+
+          body_es:
+            record_invalid: "La entrada no es válida"
+            not_found: "No encontrado"
+            taken: "ya ha sido tomado"
+            blank: "no puede estar en blanco"
+            invalid: "no es válido"
+            too_short: "es demasiado corto (mínimo %{count} caracteres)"
+            too_long: "es demasiado largo (máximo %{count} caracteres)"
+
+          user:
+            record_invalid: "La entrada no es válida"
+            not_found: "No encontrado"
+            taken: "ya ha sido tomado"
+            blank: "no puede estar en blanco"
+            invalid: "no es válido"
+            too_short: "es demasiado corto (mínimo %{count} caracteres)"
+            too_long: "es demasiado largo (máximo %{count} caracteres)"
+          label:
+            record_invalid: "La entrada no es válida"
+            not_found: "No encontrado"
+            taken: "ya ha sido tomado"
+            blank: "no puede estar en blanco"
+            invalid: "no es válido"
+            too_short: "es demasiado corto (mínimo %{count} caracteres)"
+            too_long: "es demasiado largo (máximo %{count} caracteres)"
+    models:
+      post:
+        one: Post
+        other: Posts
+      user:
+        one: Usuario
+        other: Usuarios
+      label:
+        one: Etiqueta
+        other: Etiquetas
+    attributes:
+      post:
+        title_es: Título 
+        body_es: Cuerpo
+        created_at: Creado el
+        updated_at: Actualizado el
+      user:
+        email: Correo electrónico
+      label:
+        name: Nombre
+      
+
+
