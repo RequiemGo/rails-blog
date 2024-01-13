@@ -12,7 +12,7 @@
   <% end %>
 
   <div>
-    <%= form.label :title_es, 'Título',style: "display: block" %>
+    <%= form.label :title_es, 'Título',style: "display: block", required: true %>
     <%= form.text_field :title_es %>
   </div>
 
@@ -22,7 +22,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :body_es, 'Cuerpo', style: "display: block" %>
+    <%= form.label :body_es, 'Cuerpo', style: "display: block", required: true %>
     <%= form.rich_text_area :body_es %>
   </div>
 

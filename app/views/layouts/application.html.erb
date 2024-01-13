@@ -8,22 +8,28 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>    
     <!-- Agregamos los estilos personalizados -->
     <style>
 
+
+
       header {
-        background-color: #2A4D61; 
+        background-color: #000000; 
         padding: 10px;
         color: #ffffff; 
       }
 
       footer {
-        background-color: #2A4D61; 
+        font-family: 'Roboto', sans-serif; /* Cambia 'Roboto' por el nombre de la fuente que quieras usar */
+        background-color: #000000;
         padding: 10px;
-        color: #ffffff; 
+        color: #ffffff;
         text-align: center;
       }
+
     </style>
     
     <!-- Enlaces de Bootstrap -->
@@ -46,15 +52,25 @@
     
     </main>
     <style>
+      html, body {
+        height: 100%;
+      }
+
       body {
-        background-color: #66737A;
-        color: #ffffff; 
-        font-family: 'Arial ', sans-serif; 
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      main {
+        flex-grow: 1;
       }
     </style>
     <footer>
-      <span>Copyright <%= Date.current.year %> by Andres Castillo.</span> 
-      <a href="https://twitter.com/Me_Requiem" target="_blank">Twitter</a>
+      <span><i class="fab fa-copyright"></i>&copy; Copyright <%= Date.current.year %> by Andres Castillo </span> 
+      <a href="https://twitter.com/Me_Requiem" target="_blank"><i class="fab fa-twitter"></i></a>
     </footer>
   </body>
 </html>

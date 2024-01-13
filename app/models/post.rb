@@ -13,6 +13,6 @@ class Post < ApplicationRecord
   has_rich_text :body_en
   has_many :labels
 
-  validates :title_es, :title_en ,presence: true, length: { minimum: 5, maximum: 50 }
-  validates :body_es, :body_en, presence: true, length: { minimum: 5, maximum: 1200 }
+  validates :title_es, presence: true, length: { minimum: 5, maximum: 50 }
+  validates :body_es, presence: true, length: { minimum: 5, maximum: 1200 }
 end
